@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { TimerSetup } from './components/TimerSetup';
+import { TimerControl } from './components/TimerControl';
+import { useTimerState } from './hooks/TimerStateHook';
+import {useTimeSet} from './hooks/TimeSetHook';
+
+export type PeriodTypes = "break" | "session";
 
 function App() {
+
+  const { sessionTime, breakTime, incrementTimeSet, decrementTimeSet, formattedSessionTime, formattedBreakTime, resetTimeSet } = useTimeSet();
+  const { timerIsRunning, timerStarted, timerStopped } = useTimerState();
+
+  const timerSetupProps = {sessionTime, breakTime, formattedSessionTime, formattedBreakTime, incrementTimeSet, decrementTimeSet, timerIsRunning };
+
+  const timerControlProps = { timerIsRunning, timerStarted, timerStopped, sessionTime, breakTime, resetTimeSet };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TimerSetup type="session" data={timerSetupProps}/>
+      <TimerSetup type="break" data={timerSetupProps}/>
+      <TimerControl data={timerControlProps}/>
     </div>
   );
 }
