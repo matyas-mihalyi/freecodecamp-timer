@@ -42,7 +42,7 @@ export const useTimeSet = () => {
   };
       
   function decrementTimeSet (timeSet:number, period:PeriodTypes):void {
-    if (timeSet > 0) {
+    if (timeSet > ONE_MINUTE) {
       switch (period) {
         case "session":
           setSessionTime(sessionTime - ONE_MINUTE);
