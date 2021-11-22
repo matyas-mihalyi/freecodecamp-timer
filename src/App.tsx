@@ -9,10 +9,10 @@ export type PeriodTypes = "break" | "session";
 
 function App() {
 
-  const { sessionTime, breakTime, incrementTimeSet, decrementTimeSet, formattedSessionTime, formattedBreakTime, resetTimeSet } = useTimeSet();
+  const { sessionTime, breakTime, incrementTimeSet, decrementTimeSet,  resetTimeSet } = useTimeSet();
   const { timerIsRunning, timerStarted, timerStopped } = useTimerState();
 
-  const timerSetupProps = {sessionTime, breakTime, formattedSessionTime, formattedBreakTime, incrementTimeSet, decrementTimeSet, timerIsRunning };
+  const timerSetupProps = {sessionTime, breakTime, incrementTimeSet, decrementTimeSet, timerIsRunning };
 
   const timerControlProps = { timerIsRunning, timerStarted, timerStopped, sessionTime, breakTime, resetTimeSet };
 

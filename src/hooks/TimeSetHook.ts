@@ -58,10 +58,7 @@ export const useTimeSet = () => {
     setBreakTime(5 * ONE_MINUTE);
   }
 
-  const formattedSessionTime = formatTime(sessionTime);
 
-  const formattedBreakTime = formatTime(breakTime);
-
-  return { sessionTime, breakTime, incrementTimeSet, decrementTimeSet, formattedSessionTime, formattedBreakTime, resetTimeSet }
+  return { sessionTime, breakTime, incrementTimeSet, decrementTimeSet, resetTimeSet }
 
 }

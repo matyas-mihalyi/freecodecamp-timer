@@ -1,10 +1,9 @@
-import { PeriodTypes } from '../App'
+import { PeriodTypes } from '../App';
+import {ONE_SECOND, ONE_MINUTE} from '../hooks/TimeSetHook'
 
 type TimerSetupData = {
   sessionTime:number,
   breakTime:number,
-  formattedSessionTime:string,
-  formattedBreakTime:string,
   incrementTimeSet:(timeSet:number, type:PeriodTypes)=> void,
   decrementTimeSet:(timeSet:number, type:PeriodTypes)=> void,
   timerIsRunning:boolean,
@@ -18,7 +17,7 @@ type TimerSetupProps = {
 
 export const TimerSetup = (props:TimerSetupProps) => {
 
-  const {sessionTime, breakTime, formattedSessionTime, formattedBreakTime, incrementTimeSet, decrementTimeSet, timerIsRunning } = props.data;
+  const {sessionTime, breakTime, incrementTimeSet, decrementTimeSet, timerIsRunning } = props.data;
   const type = props.type;
 
   const timeSet = ():number => {
@@ -30,12 +29,12 @@ export const TimerSetup = (props:TimerSetupProps) => {
     };
   };
 
-  const formattedTime = ():string => {
+  const formattedTime = ():number => {
     switch (type) {
       case "session":
-        return formattedSessionTime;
+        return sessionTime / ONE_MINUTE;
       case "break":
-        return formattedBreakTime;
+        return breakTime / ONE_MINUTE;
     };
   };
   
