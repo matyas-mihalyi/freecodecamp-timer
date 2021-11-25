@@ -17,10 +17,10 @@ function App() {
   const timerControlProps = { timerIsRunning, timerStarted, timerStopped, sessionTime, breakTime, resetTimeSet };
 
   return (
-    <div className="App">
+    <div className="App row d-flex flex-column min-vh-100 justify-content-center align-items-center gap-1">
+      <TimerControl data={timerControlProps}/>
       <TimerSetup type="session" data={timerSetupProps}/>
       <TimerSetup type="break" data={timerSetupProps}/>
-      <TimerControl data={timerControlProps}/>
     </div>
   );
 }

@@ -1,0 +1,22 @@
+/* #timer-label {
+  width: 100%;
+} */
+#time-left {
+  font-size: 3.2rem;
+  width: 100%;
+}
+
+.period-title::first-letter{
+  text-transform: capitalize;
+}
+
+.period-title{
+  font-size: 1.25rem;
+  width: 100%;
+}
+
+.setup-wrapper > span {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}

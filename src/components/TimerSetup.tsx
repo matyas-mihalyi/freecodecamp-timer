@@ -53,11 +53,11 @@ export const TimerSetup = (props:TimerSetupProps) => {
   
   
   return (
-    <div className="setup-wrapper">
-      <h2 id={ids.label}>{type} Length</h2>
+    <div className="setup-wrapper col-md-4 col-xs-12 py-3 d-flex justify-content-center flex-wrap gap-1">
+      <h3 id={ids.label} className="period-title text-center">{type} Length</h3>
       <span id={ids.length}>{formattedTime()}</span>
-      <button id={ids.increment} onClick={()=> incrementTimeSet(timeSet(), type)} type="button">increment</button>
-      <button id={ids.decrement} onClick={()=> decrementTimeSet(timeSet(), type)} type="button">decrement</button>
+      <button id={ids.increment} onClick={()=> incrementTimeSet(timeSet(), type)} type="button" className="btn btn-sm btn-secondary"><i className="ri-arrow-up-s-line"></i></button>
+      <button id={ids.decrement} onClick={()=> decrementTimeSet(timeSet(), type)} type="button" className="btn btn-sm  btn-secondary"><i className="ri-arrow-down-s-line"></i></button>
     </div>
   );
 }
