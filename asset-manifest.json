@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/freecodecamp-timer/static/css/main.52977260.chunk.css",
+    "main.css": "/freecodecamp-timer/static/css/main.e5c1a5cf.chunk.css",
     "main.js": "/freecodecamp-timer/static/js/main.fe90e3dc.chunk.js",
     "main.js.map": "/freecodecamp-timer/static/js/main.fe90e3dc.chunk.js.map",
     "runtime-main.js": "/freecodecamp-timer/static/js/runtime-main.5087517b.js",
@@ -8,13 +8,13 @@
     "static/js/2.f5e29cfc.chunk.js": "/freecodecamp-timer/static/js/2.f5e29cfc.chunk.js",
     "static/js/2.f5e29cfc.chunk.js.map": "/freecodecamp-timer/static/js/2.f5e29cfc.chunk.js.map",
     "index.html": "/freecodecamp-timer/index.html",
-    "static/css/main.52977260.chunk.css.map": "/freecodecamp-timer/static/css/main.52977260.chunk.css.map",
+    "static/css/main.e5c1a5cf.chunk.css.map": "/freecodecamp-timer/static/css/main.e5c1a5cf.chunk.css.map",
     "static/js/2.f5e29cfc.chunk.js.LICENSE.txt": "/freecodecamp-timer/static/js/2.f5e29cfc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5087517b.js",
     "static/js/2.f5e29cfc.chunk.js",
-    "static/css/main.52977260.chunk.css",
+    "static/css/main.e5c1a5cf.chunk.css",
     "static/js/main.fe90e3dc.chunk.js"
   ]
 }
